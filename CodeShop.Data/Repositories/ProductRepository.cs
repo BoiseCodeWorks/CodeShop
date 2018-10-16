@@ -25,17 +25,22 @@ namespace CodeShop.Data.Repositories
         public IProduct Create(IProductCreation data)
         {
             var newProduct = new Product(data);
-            var successful = _db.Execute(@"
+            var successful = _db.ExecuteAsync(@"
                 INSERT INTO products 
                 (id, name, description, img, isPublic, creatorId, createdTimestamp)
                 VALUES (@Id, @Name, @Description, @Img, @IsPublic, @CreatorId, @CreatedTimestamp);
             ", newProduct);
-
-            if(successful == 1)
+            
+            if(successful.Result == 1)
             {
                 return newProduct;
             }
             return null;
+        }
+
+        internal IEnumerable<IProduct> GetProducts()
+        {
+            return _db.Query<Product>("SELECT * FROM products;");
         }
 
 
