@@ -1,4 +1,4 @@
-﻿using CodeShop.Data.Interfaces;
+﻿using CodeShop.Common.Interfaces;
 using CodeShop.Data.Repositories;
 using System;
 using System.Collections.Generic;

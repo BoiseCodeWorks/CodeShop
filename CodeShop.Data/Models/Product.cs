@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CodeShop.Data.Interfaces;
+using CodeShop.Common.Interfaces;
 
 namespace CodeShop.Data.Models
 {

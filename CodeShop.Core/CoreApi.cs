@@ -1,6 +1,6 @@
 ﻿using CodeShop.Core.Validators;
 using CodeShop.Data;
-using CodeShop.Data.Interfaces;
+using CodeShop.Common.Interfaces;
 using System;
 
 namespace CodeShop.Core
