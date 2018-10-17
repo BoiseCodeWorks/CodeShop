@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CodeShop.Core.Validators
+namespace CodeShop.Business.Validators
 {
     internal static class ProductValidator
     {

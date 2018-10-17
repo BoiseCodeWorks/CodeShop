@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>CodeShop.Business</AssemblyName>
+    <RootNamespace>CodeShop.Business</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

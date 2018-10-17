@@ -21,6 +21,6 @@ namespace CodeShop.Common.Interfaces
     public interface IProduct : IProductCreation
     {
         string Id { get; set; }
-        DateTime CreatedTimestamp { get; set; }
+        DateTimeOffset CreatedTimestamp { get; set; }
     }
 }

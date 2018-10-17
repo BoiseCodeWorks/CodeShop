@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using CodeShop.Business;
+using CodeShop.Data;
+using CodeShop.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +29,10 @@ namespace CodeShop.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddTransient<IDbConnection>(x => DbConnectionOptions.ConnectToMySQL("server=den1.mysql5.gear.host;port=3306;database=codeshop;user id=codeshop;password=Cc2buwx5-Fk_"));
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<ProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
